@@ -1,0 +1,11 @@
+uvicorn[standard]
+fastapi
+pydantic
+streamlit
+requests
+langchain
+langchain-core
+langchain-ollama
+langchain-community
+chromadb
+beautifulsoup4
