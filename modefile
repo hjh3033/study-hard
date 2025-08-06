@@ -1,0 +1,13 @@
+# 다운로드한 GGUF 파일의 이름을 지정합니다.
+FROM ./ggml-model-Q5_K_M.gguf
+
+# 모델이 대화할 때 사용할 템플릿을 지정합니다. (EEVE 모델의 공식 템플릿)
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
+
+# 시스템 프롬프트를 지정합니다.
+SYSTEM """You are a helpful AI assistant specializing in engineering and patents in Korea."""
